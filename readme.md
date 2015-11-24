@@ -1,3 +1,9 @@
+**Note: I have forked this repo to make local changes to accommodate FNC1 control character in datamatrix barcode. I am not a maintainer of this codebase and will not accept pull requests**
+
+**Use at your own risk.**
+
+-------
+
 This is a barcode generation package inspired by [https://github.com/tecnickcom/TCPDF](https://github.com/tecnickcom/TCPDF). Actually I use that package's underline classes for generating barcode. This package is just a wrapper of that package and adds compatibility with Laravel 5.
 
 I used the following classes of that package.
