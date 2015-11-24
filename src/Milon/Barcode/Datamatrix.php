@@ -719,9 +719,16 @@ class Datamatrix {
                                 ++$pos;
                                 if ($this->isCharMode($chr, ENC_ASCII_EXT)) {
                                     // 3. If the next data character is extended ASCII (greater than 127) encode it in ASCII mode first using the Upper Shift (value 235) character.
-                                    $cw[] = 235;
-                                    $cw[] = ($chr - 127);
-                                    $cw_num += 2;
+
+                                    if($chr == 232){
+                                        $cw[] = 232;
+                                        $cw_num += 1;
+                                    }
+                                    else{
+                                        $cw[] = 235;
+                                        $cw[] = ($chr - 127);
+                                        $cw_num += 2;
+                                    }
                                 } else {
                                     // 4. Otherwise process the next data character in ASCII encodation.
                                     $cw[] = ($chr + 1);
